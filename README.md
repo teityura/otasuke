@@ -22,4 +22,4 @@ PHPの登録ページや各スクリプトの関連の弱さ？など
 「get_human.py」の「play_music」で指定してください。
 
 
-ex: cp ~/wav/TaurusDemon.wav ~/otasuke/wav/
+ex: [cp ~/wav/TaurusDemon.wav ~/otasuke/wav/]
