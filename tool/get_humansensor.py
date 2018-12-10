@@ -4,13 +4,14 @@ import RPi.GPIO as GPIO
 import sys
 import time
 
-DIR = r'/home/pi/otasuke/'
-play_music = r'aplay ' + DIR + r'wav/TaurusDemon.wav' + r'; exit'
-send_ir = DIR + r'remote_control/sendir'
-ir1 = DIR + r'/home/pi/remote_control/cooler_on_16.dat'
-ir2 = DIR + r'/home/pi/remote_control/light_on.dat'
+DIR = r'/home/pi/otasuke'
+play_music = r'aplay ' + DIR + r'/wav/TaurusDemon.wav' + r'; exit'
+send_ir = DIR + r'/remote_control/sendir'
+#ir1 = DIR + r'/remote_control/cooler_on_16.dat'
+ir1 = DIR + r'/remote_control/heater_on_30.dat'
+ir2 = DIR + r'/remote_control/light_on.dat'
 
-subprocess.call(send_ir+ir1, shell=True)
+subprocess.call(send_ir + ' ' + ir1, shell=True)
 p = subprocess.Popen(play_music, shell=True)
 
 led_pin = 38
