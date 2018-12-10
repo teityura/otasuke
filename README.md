@@ -20,3 +20,4 @@ PHPの登録ページや各スクリプトの関連の弱さ？など
 
 アラーム音楽は「~/otasuke/wav/」に入れて、
 「get_human.py」の「play_music」で指定してください。
+メモ: 「cp ~/wav/TaurusDemon.wav ~/otasuke/wav/」
