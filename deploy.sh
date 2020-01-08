@@ -18,7 +18,7 @@ SEP=$(for i in $(seq 1 $(tput cols)) ; do echo -n '#' ; done ; echo ;)
 echo -e "\n${SEP}\nOSとroot権限の確認 開始\n${SEP}" ; sleep 2 ;
 # ==========================================================================================
 set -x
-uname -a | grep -i raspberry || (echo 'OS が Raspbianではないため、終了します' ; exit 1 ;)
+cat /etc/os-release | grep -i rasp || (echo 'OS が Raspbianではないため、終了します' ; exit 1 ;)
 if [ "$(sudo whoami)" != "root" ]; then echo 'root権限がないため、終了します' ; exit 1 ; fi
 set +x
 # ==========================================================================================
